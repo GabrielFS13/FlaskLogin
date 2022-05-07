@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: #474073;
+    color: white;
+    padding: 10px;
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #4F4D8C;
+}
+nav ul{
+    display: flex;
+    padding: 2px;
+    list-style: none;
+}
+nav ul li{
+    margin-left: 10px;
+}
+
+
+
+menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+.form{
+    margin-top: 30px;
+}
+form{
+    width: 600px;
+    background: #474073;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+form input{
+    padding: 5px;
+    width: 100%;
+}
+select{
+    width: 100%;
+    padding: 5px;
+}
+
+.choices{
+    display: flex;
+    justify-content: left;
+}
+.choices input, label{
+    width: auto;
+    margin: 10px;
+}
+label{
+    text-transform: capitalize;
+}
+.center{
+    text-align: center;
+}
+
+.form-container form input{
+    margin: 10px 0 10px 0;
+}
+
+.linha{
+    display: flex;
+    justify-content: center;
+}
+.linha button{
+    margin: 10px;
+}

@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="form">
+  {% if msg == 'Email or Password invalid'%}
+  <div class="alert alert-danger" role="alert">
+    {{msg}}
+  </div>
+  {% endif %}
+    <form action="" method="POST" class="row g-3">
+      {{ form.csrf_token }}
+        <div class="col-md-6">
+            {{form.username.label}}
+            {{form.username(placeholder='Username', class='form-control')}}
+          </div>
+          <div class="col-md-6">
+            {{form.email.label}}
+            {{form.email(placeholder='Email', class='form-control')}}
+          </div>
+          <div class="col-12">
+            {{form.conf_email.label("Confirm Email")}}
+            {{form.conf_email(placeholder='Confirm Email', class='form-control')}}
+          </div>
+          <div class="col-md-6">
+            {{form.password.label}}
+            {{form.password(placeholder='Password', class='form-control')}}
+          </div>
+          <div class="col-md-6">
+            {{form.conf_pass.label("Confirm Password")}}
+            {{form.conf_pass(placeholder='Confirm password', class='form-control')}}
+          </div>
+          <div class="col-md-6">
+            {{form.cpf.label("CPF")}}
+            {{form.cpf(placeholder='CPF', class='form-control')}}
+          </div>
+          <div class="col-md-6">
+            {{form.cep.label("CEP")}}
+            {{form.cep(placeholder='CEP', class='form-control')}}
+          </div>
+          <div class="col-md-12">
+            {{form.select(class='form-control')}}
+          </div>
+          <div class="col-12">
+            <div class="choices">
+                {% for choice in form.sex %}
+                {{choice(class='form-check-input')}}
+                {{choice.label}}
+                {% endfor %}
+              </div>
+          </div>
+          <div class="col-12 center">
+            <button type="submit" class="btn btn-success">Register</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+          </div>
+    </form>
+    {% if msg == 'Account Created'%}
+  <div class="alert alert-success" role="alert">
+    {{msg}}
+  </div>
+  {% endif %}
+</div>
+    
+    
+{% endblock %}

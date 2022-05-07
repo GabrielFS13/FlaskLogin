@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="form-container">
+    <form action="" method="POST">
+        {{ form.csrf_token }}
+        {{form.email.label}}
+        {{form.email(class='form-control')}}
+        {{form.password.label}}
+        {{form.password(class='form-control')}}
+        <div class="linha">
+            <button type="submit" class="btn btn-success">Logon</button>
+            <button type="reset"  class="btn btn-danger">Reset</button>
+        </div>
+    </form>
+    {% if msg %}
+        {{msg}}
+    {% endif %}
+</div>
+   
+{% endblock %}
